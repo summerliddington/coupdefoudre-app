@@ -1,21 +1,30 @@
-import { Route } from 'react-router-dom'
-import React, { Component } from 'react'
-import Login from './auth/Login'
-import Home from './home/Home'
+import { Route } from "react-router-dom";
+import React, { Component } from "react";
+// import MyClosetList from '../mycloset/MyClosetList';
+// import OtherClosetList from '../findNewClothes/OtherClosetList';
+// import Login from "./auth/Login";
+import Home from "./components/home/Home"
 
-export default class ApplicationViews extends Component {
+
+class ApplicationViews extends Component {
 
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+
     render() {
-      return (
-        <React.Fragment>
-            <Route exact path="/login" render={props => {
-                  return <Login setUser={this.props.setUser} {...props} />
-            }} />
-            <Route exact path="/" render={props => {
-              return <Home setUser={this.props.setUser} currentUserId={this.props.currentUserId} {...props} />
-            }} />
+        // console.log(this.props.currentUser)
+        return (
+            <React.Fragment>
+                <Route exact path="/" render={(props) => {
+                    return <Home {...props} />
+                  }} />
+            {/* <Route exact path="/myCloset" render={(props) => {
+                return <MyClosetList key={this.props.currentUser} currentUser={this.props.currentUser} {...props} />
+              }} />
+              <Route exact path="/findNewClothes" render={(props) => {
+                return <OtherClosetList currentUser={this.props.currentUser}{...props} />
+              }} /> */}
             </React.Fragment>
-    );
+        )
+    }
 }
-}
+export default ApplicationViews;
