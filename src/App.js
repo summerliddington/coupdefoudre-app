@@ -65,16 +65,17 @@ class App extends Component {
               isAuthenticated={this.isAuthenticated}
               clearUser={this.clearUser}
             />
+             <ApplicationViews
+              user={this.state.user}
+              isAuthenticated={this.isAuthenticated}
+              currentUser={this.state.currentUser}
+             />
             <NavFooter
               user={this.state.user}
               isAuthenticated={this.isAuthenticated}
               clearUser={this.clearUser}
             />
-            <ApplicationViews
-              user={this.state.user}
-              isAuthenticated={this.isAuthenticated}
-              currentUser={this.state.currentUser}
-                />
+
           </>
           : <><div className="logRegContainer">
             <Login setUser={this.setUser}

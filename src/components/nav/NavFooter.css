@@ -1,0 +1,9 @@
+nav .footerContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerLinks li {
+    
+    list-style-type: none;
+}
