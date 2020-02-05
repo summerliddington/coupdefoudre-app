@@ -13,8 +13,10 @@ render(){
       <header>
           <nav className="footerContainer">
             <ul className="footerLinks">
-              <li><Link className="nav-link" to="/">Home</Link></li>
-              <li><Link className="nav-link" onClick={this.handleLogout}>Logout</Link></li>
+              <li><Link className="nav-link" to="/"><img id="homeIcon" src={require('./home-icon.png')} alt="Home Button"/></Link></li>
+              <li><Link className="nav-link" to="./addNew"><img id="addIcon" src={require('./add-icon.png')} alt="Add Button"/></Link></li>
+              <li><Link className="nav-link" to="./profile"><img id="profileIcon" src={require('./profile-icon.png')} alt="Profile Button"/></Link></li>
+
             </ul>
           </nav>
       </header>
