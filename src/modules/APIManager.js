@@ -23,9 +23,6 @@ export default {
   getUserEmail(email){
     return fetch(`${remoteURL}/users?email=${email}`).then(result => result.json())
   },
-  getAllMessages(resource) {
-    return fetch(`${remoteURL}/${resource}`).then(result => result.json())
-  },
 
   delete(resource, id) {
     return fetch(`${remoteURL}/${resource}/${id}`, {

@@ -1,9 +1,8 @@
 import { Route } from "react-router-dom";
 import React, { Component } from "react";
-// import MyClosetList from '../mycloset/MyClosetList';
-// import OtherClosetList from '../findNewClothes/OtherClosetList';
 // import Login from "./auth/Login";
 import Home from "./components/home/Home"
+import Profile from "./components/profile/Profile";
 
 
 class ApplicationViews extends Component {
@@ -17,12 +16,10 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <Home {...props} />
                   }} />
-            {/* <Route exact path="/myCloset" render={(props) => {
-                return <MyClosetList key={this.props.currentUser} currentUser={this.props.currentUser} {...props} />
-              }} />
-              <Route exact path="/findNewClothes" render={(props) => {
-                return <OtherClosetList currentUser={this.props.currentUser}{...props} />
-              }} /> */}
+                <Route exact path="/profile" render={(props) => {
+                    return <Profile {...props} />
+                  }} />
+
             </React.Fragment>
         )
     }
