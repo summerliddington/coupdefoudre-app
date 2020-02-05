@@ -10,7 +10,9 @@ export default {
   getUserEmail(email){
     return fetch(`${remoteURL}/users?email=${email}`).then(result => result.json())
   },
-
+  getItems() {
+    return fetch(`${remoteURL}/items`).then(result => result.json())
+  },
   delete(resource, id) {
     return fetch(`${remoteURL}/${resource}/${id}`, {
       method: "DELETE"

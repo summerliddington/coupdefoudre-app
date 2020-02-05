@@ -19,7 +19,6 @@ class Register extends Component {
 
   handleRegister = (e) => {
     e.preventDefault()
-    // this.toggle()
     APIManager.getAll("users").then((users) => {
       let isMatch = users.find(user => user.email.toLowerCase() === this.state.Email.toLowerCase())
 

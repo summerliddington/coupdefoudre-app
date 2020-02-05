@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // import Login from "./auth/Login";
 import Home from "./components/home/Home"
 import Profile from "./components/profile/Profile";
+import ItemList from "./components/itemFeed/ItemList";
 
 
 class ApplicationViews extends Component {
@@ -15,6 +16,9 @@ class ApplicationViews extends Component {
             <React.Fragment>
                 <Route exact path="/" render={(props) => {
                     return <Home {...props} />
+                  }} />
+                <Route path="/itemFeed" render={(props) => {
+                    return <ItemList {...props} />
                   }} />
                 <Route exact path="/profile" render={(props) => {
                     return <Profile {...props} />

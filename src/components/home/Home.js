@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
+import ItemList from "../itemFeed/ItemList"
 import APImanager from "../../modules/APIManager";
 import "./Home.css";
 
@@ -21,12 +22,8 @@ class Home extends Component {
             <>
             <div className="home">
               <h2>Hey, {this.state.user.name}!</h2>
-                <h2>User Email: {this.state.user.email}</h2>
-                {/* <h3>Notifications:</h3>
-                </div>
-                <div className="noteList">
-                <NotificationList
-                /> */}
+                <div>This is your Feed</div>
+                < ItemList />
                 </div>
                 </>
         )
