@@ -44,9 +44,6 @@ class Register extends Component {
             sessionStorage.setItem("email", this.state.email);
             sessionStorage.setItem("name", this.state.name);
             this.props.setUser(createdUser.id);
-
-              //This determines which page you land on upon registration
-              // this.props.history.push("/")
             }
         )}
       }

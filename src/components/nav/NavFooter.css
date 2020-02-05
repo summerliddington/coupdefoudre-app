@@ -1,9 +1,14 @@
-nav .footerContainer {
+/* .footerContainer {
     display: flex;
     flex-direction: row;
-}
+    justify-content: space-between;
+} */
 
-.footerLinks li {
-    
+.footerLinks {
     list-style-type: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.nav-link {
+ padding: 2em;
 }

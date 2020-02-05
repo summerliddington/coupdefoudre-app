@@ -6,14 +6,11 @@ import { withRouter } from "react-router-dom";
 
 class Login extends Component {
 
-    // Set initial state
-
     state = {
         email: "",
         password: "",
         id: "",
     }
-
 
     handleFieldChange = (evt) => {
         const stateToChange = {}
@@ -24,10 +21,6 @@ class Login extends Component {
     //
     handleLogin = (e) => {
         e.preventDefault()
-        /*
-            For now, just store the email and password that
-            the customer enters into local storage.
-        */
         APIManager.getUserEmail(this.state.email).then((user) => {
             if (this.state.email === "") {
                 window.alert("Please enter email")
@@ -57,7 +50,7 @@ class Login extends Component {
                     </FormGroup>
                     <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                         <Label htmlFor="inputPassword" className="mr-sm-2">Password:</Label>
-                        <Input onChange={this.handleFieldChange} 
+                        <Input onChange={this.handleFieldChange}
                             required="" type="password" name="password" id="password" />
                     </FormGroup>
                     <Button onClick={this.handleLogin}>Submit</Button>
