@@ -5,11 +5,10 @@ import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 class Register extends Component {
 
-  // Set initial state
   state = {
     name: "",
-    rEmail: "",
-    rPassword: "",
+    Email: "",
+    Password: "",
   };
 
   handleFieldChange = (event) => {
@@ -22,7 +21,7 @@ class Register extends Component {
     e.preventDefault()
     // this.toggle()
     APIManager.getAll("users").then((users) => {
-      let isMatch = users.find(user => user.email.toLowerCase() === this.state.rEmail.toLowerCase())
+      let isMatch = users.find(user => user.email.toLowerCase() === this.state.Email.toLowerCase())
 
       if (this.state.name === "") {
         window.alert("Please enter a name")
@@ -35,8 +34,8 @@ class Register extends Component {
       } else {
         let newUser = {
           name: this.state.name,
-          email: this.state.rEmail,
-          password: this.state.rPassword,
+          email: this.state.Email,
+          password: this.state.Password,
         };
         APIManager.post("users", newUser)
             .then((createdUser) => {
@@ -67,14 +66,14 @@ class Register extends Component {
             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
               <Label htmlFor="inputEmail" className="mr-sm-2">Email:</Label>
               <Input onChange={this.handleFieldChange} type="email"
-                id="rEmail"
+                id="Email"
                 placeholder="Email address"
                 required="" autoFocus="" />
             </FormGroup>
             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
               <Label htmlFor="inputPassword" className="mr-sm-2">Password:</Label>
               <Input onChange={this.handleFieldChange} type="password"
-                id="rPassword"
+                id="Password"
                 placeholder="Password"
                 required="" />
             </FormGroup>

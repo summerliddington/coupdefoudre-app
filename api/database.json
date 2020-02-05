@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "name": "Summer",
+      "email": "summerliddington@me.com",
+      "password": "summer",
+      "id": 1
+    },
+    {
+      "name": "Leigh",
+      "email": "leigh@leigh.com",
+      "password": "leigh",
+      "id": 2
+    },
+    {
+      "name": "Sage",
+      "email": "sage@sage.com",
+      "password": "sage",
+      "id": 3
+    },
+    {
+      "name": "Gradi",
+      "email": "gradi@gradi.com",
+      "password": "gradi",
+      "id": 4
+    },
+    {
+      "name": "New",
+      "email": "new@new.com",
+      "password": "new",
+      "id": 5
+    }
+  ],
+  "items": [
+    {
+      "userId": 1,
+      "itemName": "sweater",
+      "brand": "babaa",
+      "size": "small",
+      "color": "oak",
+      "imageURL": "",
+      "id": 1
+    }
+  ]
+}

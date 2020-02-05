@@ -18,7 +18,6 @@ class Login extends Component {
         this.setState(stateToChange)
     }
 
-    //
     handleLogin = (e) => {
         e.preventDefault()
         APIManager.getUserEmail(this.state.email).then((user) => {
