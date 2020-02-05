@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-  } from 'reactstrap';
+import { Card, CardBody, Button, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
 import APIManager from '../../modules/APIManager';
 
 
@@ -40,15 +37,15 @@ class ItemCard extends Component {
   render() {
     return (
       <div className="itemCardContainer">
-        <div className="itemCardContent">
-        <h2>{this.props.item.itemName}</h2>
-        </div>
-        <Card>
+        <Card top width="180px" body outline color="secondary">
         <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
         <CardBody>
-          <CardTitle>{this.props.item.itemName}</CardTitle>
+          <CardTitle>{this.props.item.price}</CardTitle>
+          <CardSubtitle>{this.props.item.brand}</CardSubtitle>
           <CardSubtitle>{this.props.item.itemName}</CardSubtitle>
-          <CardText>{this.props.item.itemName}</CardText>
+          <CardSubtitle>{this.props.item.size}</CardSubtitle>
+          <CardSubtitle>{this.props.item.color}</CardSubtitle>
+          <CardText>{this.props.item.description}</CardText>
           <Button>Buy</Button>
         </CardBody>
       </Card>
