@@ -46,6 +46,8 @@ class ItemCard extends Component {
           <CardSubtitle>{this.props.item.size}</CardSubtitle>
           <CardSubtitle>{this.props.item.color}</CardSubtitle>
           <CardText>{this.props.item.description}</CardText>
+          <Button onClick={() => {this.props.history.push(`/items/${this.props.item.id}/edit`)}}>Edit</Button>
+          <Button onClick={() => this.props.handleDelete(this.props.item.id)}>Delete</Button>
           <Button>Buy</Button>
         </CardBody>
       </Card>
