@@ -13,14 +13,22 @@ import APIManager from '../../modules/APIManager'
             // imageURL: "",
             // userId: ""
         }
-
-    componentDidMount(){
-        APIManager.getItems()
+        getData = () => {
+            APIManager.getItems()
             .then((items) => {
                 this.setState({
                     items: items
                 })
             })
+        }
+    componentDidMount(){
+        // APIManager.getItems()
+        //     .then((items) => {
+        //         this.setState({
+        //             items: items
+        //         })
+        //     })
+        this.getData()
         }
 
     render(){

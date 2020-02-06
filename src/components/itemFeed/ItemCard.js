@@ -14,26 +14,19 @@ class ItemCard extends Component {
         color: "",
         price: "",
     }
-    getData = () => {
-        APIManager.getItems()
-        .then((items) => {
-            this.setState({
-                items: items
-            })
-        })
-    }
-    handleDelete = id => {
+    // getData = () => {
+    //     APIManager.getItems()
+    //     .then((items) => {
+    //         this.setState({
+    //             items: items
+    //         })
+    //     })
+    // }
+    handleDelete = (id) => {
         APIManager.delete(id)
         .then(() => this.props.getData());
       }
-    // onAddClick = () => {
-    //     const newGroupUser = {
-    //         groupId: this.props.groupId,
-    //         userId: this.props.users.id
-    //     }
-    //     APIManager.post(newGroupUser)
-    //     .then(() => this.props.updateCurrentGroupUserState())
-    // }
+
   render() {
     return (
       <div className="itemCardContainer">
@@ -47,7 +40,7 @@ class ItemCard extends Component {
           <CardSubtitle>{this.props.item.color}</CardSubtitle>
           <CardText>{this.props.item.description}</CardText>
           <Button onClick={() => {this.props.history.push(`/items/${this.props.item.id}/edit`)}}>Edit</Button>
-          <Button onClick={() => this.props.handleDelete(this.props.item.id)}>Delete</Button>
+          <Button onClick={() => {this.handleDelete(this.props.item.id)}}>Delete</Button>
           <Button>Buy</Button>
         </CardBody>
       </Card>

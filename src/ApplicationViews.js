@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import Home from "./components/home/Home"
 import Profile from "./components/profile/Profile";
 import ItemList from "./components/itemFeed/ItemList";
+import AddItem from "./components/itemFeed/AddItem"
+import EditItemForm from "./components/itemFeed/EditItemForm"
 
 
 class ApplicationViews extends Component {
@@ -23,7 +25,12 @@ class ApplicationViews extends Component {
                 <Route exact path="/profile" render={(props) => {
                     return <Profile {...props} />
                   }} />
-
+                <Route path="/item/new" render={(props) => {
+                    return <AddItem {...props} />
+                  }} />
+                <Route path="/item/:userId(\d+)/edit" render={props => {
+                    return <EditItemForm {...props} />
+                  }} />
             </React.Fragment>
         )
     }
