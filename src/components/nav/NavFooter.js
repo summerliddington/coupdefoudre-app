@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom"
+import { Nav, NavItem, NavLink } from 'reactstrap';
+
 import './NavFooter.css'
 
 class NavFooter extends Component {
@@ -10,16 +12,19 @@ class NavFooter extends Component {
 render(){
 
     return (
-      <header>
-          <nav className="footerContainer">
-            <ul className="footerLinks">
-              <li><Link className="nav-link" to="/"><img id="homeIcon" src={require('./home-icon.png')} alt="Home Button"/></Link></li>
-              <li><Link className="nav-link" to="./addNew"><img id="addIcon" src={require('./add-icon.png')} alt="Add Button"/></Link></li>
-              <li><Link className="nav-link" to="./profile"><img id="profileIcon" src={require('./profile-icon.png')} alt="Profile Button"/></Link></li>
-
-            </ul>
-          </nav>
-      </header>
+      <div>
+          <Nav>
+            <NavItem>
+              <NavLink className="nav-link" href="/"><img id="homeIcon" src={require('./home-icon.png')} alt="Home Button"/></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="nav-link" href="./AddItem"> <img id="addIcon" src={require('./add-icon.png')} alt="Add Button"/></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="nav-link" href="./profile"><img id="profileIcon" src={require('./profile-icon.png')} alt="Profile Button"/></NavLink>
+            </NavItem>
+          </Nav>
+          </div>
     )
   }
 }

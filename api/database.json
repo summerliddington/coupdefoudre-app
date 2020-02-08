@@ -34,12 +34,35 @@
   "items": [
     {
       "userId": 1,
-      "itemName": "sweater",
+      "itemName": "turtle neck",
       "brand": "babaa",
       "size": "small",
       "color": "oak",
+      "price": "$200",
+      "description": "Good, gently used condition.",
+      "id": 2
+    },
+    {
+      "price": "",
+      "itemName": "",
+      "brand": "",
+      "size": "",
+      "color": "",
+      "description": "",
       "imageURL": "",
-      "id": 1
+      "userId": null,
+      "id": 4
+    },
+    {
+      "price": "$100",
+      "itemName": "",
+      "brand": "Nisolo",
+      "size": "",
+      "color": "",
+      "description": "shoes",
+      "imageURL": "",
+      "userId": null,
+      "id": 5
     }
   ]
 }

@@ -10,29 +10,31 @@ export default {
   getUserEmail(email){
     return fetch(`${remoteURL}/users?email=${email}`).then(result => result.json())
   },
-
-  delete(resource, id) {
-    return fetch(`${remoteURL}/${resource}/${id}`, {
-      method: "DELETE"
+  getItems() {
+    return fetch(`${remoteURL}/items`).then(result => result.json())
+  },
+  delete(id) {
+    return fetch(`http://localhost:5002/items/${id}`, {
+        method: "DELETE"
     })
-      .then(result => result.json())
+    .then(result => result.json())
   },
-  post(resource, newResource) {
-    return fetch(`${remoteURL}/${resource}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(newResource)
-    }).then(data => data.json())
+    post(newItem) {
+      return fetch(`${remoteURL}/items`, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(newItem)
+      }).then(data => data.json())
   },
-  update(resource, editedResource) {
-    return fetch(`${remoteURL}/${resource}/${editedResource.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(editedResource)
-    }).then(data => data.json());
-  },
+    update(editedItem) {
+      return fetch(`${remoteURL}/items/${editedItem.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedItem)
+      }).then(data => data.json());
+    }
 }
