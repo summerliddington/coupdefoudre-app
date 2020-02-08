@@ -13,6 +13,7 @@ class ItemCard extends Component {
         size: "",
         color: "",
         price: "",
+        description: ""
     }
     // getData = () => {
     //     APIManager.getItems()

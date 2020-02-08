@@ -41,6 +41,16 @@
       "price": "$200",
       "description": "Good, gently used condition.",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "itemName": "turtle neck",
+      "brand": "babaa",
+      "size": "small",
+      "color": "oak",
+      "price": "$200",
+      "description": "Good, gently used condition.",
+      "id": 1
     }
   ]
 }

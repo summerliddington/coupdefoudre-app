@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import ItemList from "../itemFeed/ItemList"
+import ItemList from "../item/ItemList"
 import APImanager from "../../modules/APIManager";
 import "./Home.css";
 
