@@ -31,6 +31,11 @@ import APIManager from '../../modules/APIManager'
         this.getData()
         }
 
+        handleDelete = (id) => {
+            APIManager.delete(id)
+            .then(() => this.getData());
+          }
+
     render(){
         return(
             <>
@@ -41,6 +46,7 @@ import APIManager from '../../modules/APIManager'
                         item={item}
                         userId={this.state.userId}
                         getData={this.getData}
+                        handleDelete={this.handleDelete}
                         {...this.props}/>)}
             </div>
             </>

@@ -23,7 +23,7 @@ class Home extends Component {
             <div className="home">
               <h2>Hey, {this.state.user.name}!</h2>
                 <div>This is your Feed</div>
-                < ItemList />
+                < ItemList {...this.props} />
                 </div>
                 </>
         )

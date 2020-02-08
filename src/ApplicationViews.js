@@ -19,7 +19,7 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <Home {...props} />
                   }} />
-                <Route path="/item" render={(props) => {
+                <Route exact path="/item" render={(props) => {
                     return <ItemList {...props} />
                   }} />
                 <Route exact path="/profile" render={(props) => {
@@ -28,7 +28,7 @@ class ApplicationViews extends Component {
                 <Route path="/AddItem" render={(props) => {
                     return <AddItem {...props} />
                   }} />
-                <Route path="/item/:userId(\d+)/edit" render={props => {
+                <Route path="/item/:itemId(\d+)/edit" render={props => {
                     return <EditItemForm {...props} />
                   }} />
             </React.Fragment>
