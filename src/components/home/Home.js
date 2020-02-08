@@ -18,6 +18,7 @@ class Home extends Component {
     }
 
     render(){
+        console.log(parseInt(sessionStorage.getItem("credentials")))
         return(
             <>
             <div className="home">
