@@ -27,9 +27,9 @@ class AddItem extends Component {
 
     constructNewItem = evt => {
         evt.preventDefault();
-        if (this.state.itemName === "") {
-            window.alert("Please input name of item");
-        } else {
+        // if (this.state.itemName === "") {
+        //     window.alert("Please input name of item");
+        // } else 
             this.setState({ loadingStatus: true });
         const newItem = {
                 price: this.state.price,
@@ -43,7 +43,7 @@ class AddItem extends Component {
             };
         APIManager.post(newItem)
             .then((res) => this.props.history.push(`/AddItem/${res.id}`));
-        }
+        
     };
 
     render(){
@@ -71,10 +71,16 @@ class AddItem extends Component {
                     </Col>
                 </FormGroup>
                 <FormGroup row>
+                    <Label for="color" sm={2}>Color</Label>
+                    <Col sm={10}>
+                    <Input type="color" name="color" id="color" placeholder="Color" />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
                     <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
                     <Col sm={10}>
                     <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-                    <option>XS</option>
+                        <option>XS</option>
                         <option>S</option>
                         <option>M</option>
                         <option>L</option>
@@ -83,9 +89,9 @@ class AddItem extends Component {
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="exampleText" sm={2}>Text Area</Label>
+                    <Label for="description" sm={2}>Description</Label>
                     <Col sm={10}>
-                    <Input type="textarea" name="text" id="exampleText" />
+                    <Input type="description" name="description" id="description" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
