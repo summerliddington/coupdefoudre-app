@@ -42,8 +42,7 @@ class AddItem extends Component {
                 userId: this.currentUserId
             };
         APIManager.post(newItem)
-            .then((res) => this.props.history.push(`/AddItem/${res.id}`));
-        
+            .then((res) => this.props.history.push(`/item/${res.id}`));
     };
 
     render(){
@@ -55,31 +54,31 @@ class AddItem extends Component {
                 <FormGroup row>
                     <Label for="price" sm={2}>Price</Label>
                     <Col sm={10}>
-                    <Input type="price" name="price" id="price" placeholder="$" />
+                    <Input onChange={this.handleFieldChange} type="price" name="price" id="price" placeholder="$" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
                     <Label for="Brand" sm={2}>Brand</Label>
                     <Col sm={10}>
-                    <Input type="brand" name="brand" id="brand" placeholder="Brand" />
+                    <Input onChange={this.handleFieldChange} type="brand" name="brand" id="brand" placeholder="Brand" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
                     <Label for="styleName" sm={2}>Style Name</Label>
                     <Col sm={10}>
-                    <Input type="style" name="style" id="style" placeholder="Style"/>
+                    <Input onChange={this.handleFieldChange} type="style" name="style" id="style" placeholder="Style"/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
                     <Label for="color" sm={2}>Color</Label>
                     <Col sm={10}>
-                    <Input type="color" name="color" id="color" placeholder="Color" />
+                    <Input onChange={this.handleFieldChange} type="color" name="color" id="color" placeholder="Color" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
                     <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
                     <Col sm={10}>
-                    <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
+                    <Input onChange={this.handleFieldChange} type="select" name="selectMulti" id="exampleSelectMulti" multiple>
                         <option>XS</option>
                         <option>S</option>
                         <option>M</option>
@@ -91,29 +90,22 @@ class AddItem extends Component {
                 <FormGroup row>
                     <Label for="description" sm={2}>Description</Label>
                     <Col sm={10}>
-                    <Input type="description" name="description" id="description" />
+                    <Input onChange={this.handleFieldChange} type="description" name="description" id="description" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
                     <Label for="exampleFile" sm={2}>File</Label>
                     <Col sm={10}>
-                    <Input type="file" name="file" id="exampleFile" />
+                    <Input onChange={this.handleFieldChange} type="file" name="file" id="exampleFile" />
                     <FormText color="muted">
                         This is some placeholder block-level help text for the above input.
                         It's a bit lighter and easily wraps to a new line.
                     </FormText>
                     </Col>
                 </FormGroup>
-                
 
                     <Button onClick={this.constructNewItem}>Submit</Button>
                 </Form>
-                            {/* <CardTitle> onChange={this.handleFieldChange}</CardTitle>
-                            <CardSubtitle>onChange={this.handleFieldChange}</CardSubtitle>
-                            <CardSubtitle>onChange={this.handleFieldChange}</CardSubtitle>
-                            <CardSubtitle>onChange={this.handleFieldChange}</CardSubtitle>
-                            <CardSubtitle>onChange={this.handleFieldChange}</CardSubtitle>
-                            <CardText>onChange={this.handleFieldChange}</CardText> */}
             </div>
         </>
         )
