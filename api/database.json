@@ -44,15 +44,15 @@
       "userId": 1
     },
     {
-      "price": "$100",
+      "id": 7,
+      "price": "$200",
       "itemName": "turtle neck",
-      "brand": "Nisolo",
-      "size": "",
-      "color": "",
-      "description": "shoes",
+      "brand": "babaa",
+      "size": "small",
+      "color": "oak",
+      "description": "Good, gently used condition.",
       "imageURL": "",
-      "userId": 1,
-      "id": 5
+      "userId": 2
     },
     {
       "id": 4,
@@ -61,9 +61,9 @@
       "brand": "babaa",
       "size": "small",
       "color": "oak",
-      "imageURL": "",
       "description": "Good, gently used condition.",
+      "imageURL": "",
       "userId": 1
-    },
+    }
   ]
 }

@@ -42,7 +42,7 @@ class AddItem extends Component {
                 userId: this.currentUserId
             };
         APIManager.post(newItem)
-            .then((res) => this.props.history.push(`/item/${res.id}`));
+            .then(() => this.props.history.push(`/item`));
     };
 
     render(){

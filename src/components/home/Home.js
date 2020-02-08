@@ -23,7 +23,8 @@ class Home extends Component {
             <div className="home">
               <h2>Hey, {this.state.user.name}!</h2>
                 <div>This is your Feed</div>
-                < ItemList {...this.props} />
+                < ItemList {...this.props}
+                userId={parseInt(sessionStorage.getItem("credentials"))} />
                 </div>
                 </>
         )

@@ -10,11 +10,15 @@ export default {
   getUserEmail(email){
     return fetch(`${remoteURL}/users?email=${email}`).then(result => result.json())
   },
+  getWithUserId(userId) {
+    return fetch(`${remoteURL}/items?userId=${userId}`)
+        .then(result => result.json())
+  },
   getItems() {
     return fetch(`${remoteURL}/items`).then(result => result.json())
   },
   delete(id) {
-    return fetch(`http://localhost:5002/items/${id}`, {
+    return fetch(`${remoteURL}/items/${id}`, {
         method: "DELETE"
     })
     .then(result => result.json())

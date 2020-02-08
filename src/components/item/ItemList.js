@@ -37,6 +37,7 @@ import APIManager from '../../modules/APIManager'
           }
 
     render(){
+        console.log(this.props.userId)
         return(
             <>
             <div className="itemsListContainer">
@@ -44,7 +45,7 @@ import APIManager from '../../modules/APIManager'
                     <ItemCard
                         key={item.id}
                         item={item}
-                        userId={this.state.userId}
+                        userId={this.props.userId}
                         getData={this.getData}
                         handleDelete={this.handleDelete}
                         {...this.props}/>)}
