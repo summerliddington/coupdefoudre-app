@@ -42,7 +42,7 @@ class AddItem extends Component {
                 userId: this.currentUserId
             };
         APIManager.post(newItem)
-            .then((res) => this.props.history.push(`/item/${res.id}`));
+            .then(() => this.props.history.push(`/item`));
     };
 
     render(){
@@ -64,27 +64,21 @@ class AddItem extends Component {
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="styleName" sm={2}>Style Name</Label>
+                    <Label for="itemName" sm={2}>Style Name</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="style" name="style" id="style" placeholder="Style"/>
+                    <Input onChange={this.handleFieldChange} type="itemName" name="itemName" id="itemName" placeholder="Item Name"/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
                     <Label for="color" sm={2}>Color</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="color" name="color" id="color" placeholder="Color" />
+                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="colorPicker" placeholder="Color" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
+                    <Label for="size" sm={2}>Size</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </Input>
+                    <Input onChange={this.handleFieldChange} type="size" name="size" id="size" placeholder="Size"/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>

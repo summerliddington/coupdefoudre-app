@@ -16,8 +16,9 @@ import APIManager from '../../modules/APIManager'
         getData = () => {
             APIManager.getItems()
             .then((items) => {
+               const taco = items.filter(item => item.userId !== this.props.userId)
                 this.setState({
-                    items: items
+                    items: taco
                 })
             })
         }
@@ -31,7 +32,9 @@ import APIManager from '../../modules/APIManager'
         this.getData()
         }
 
+
     render(){
+        console.log(this.props.userId)
         return(
             <>
             <div className="itemsListContainer">
@@ -39,7 +42,7 @@ import APIManager from '../../modules/APIManager'
                     <ItemCard
                         key={item.id}
                         item={item}
-                        userId={this.state.userId}
+                        userId={this.props.userId}
                         getData={this.getData}
                         {...this.props}/>)}
             </div>
