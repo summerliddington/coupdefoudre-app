@@ -34,7 +34,7 @@
   "items": [
     {
       "id": 2,
-      "price": "$200",
+      "price": "$5",
       "itemName": "my item",
       "brand": "babaa",
       "size": "small",
@@ -56,7 +56,7 @@
     },
     {
       "id": 4,
-      "price": "$200",
+      "price": "$5",
       "itemName": "my tiem",
       "brand": "babaa",
       "size": "small",
@@ -64,17 +64,6 @@
       "description": "Good, gently used condition.",
       "imageURL": "",
       "userId": 1
-    },
-    {
-      "price": "300",
-      "itemName": "",
-      "brand": "NEW",
-      "size": "",
-      "color": "#9877ce",
-      "description": "NEWNESS",
-      "imageURL": "",
-      "userId": null,
-      "id": 8
     }
   ]
 }

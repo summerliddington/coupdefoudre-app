@@ -30,14 +30,10 @@ class ItemCard extends Component {
           <CardSubtitle>{this.props.item.size}</CardSubtitle>
           <CardSubtitle>{this.props.item.color}</CardSubtitle>
           <CardText>{this.props.item.description}</CardText>
-          {this.props.item.userId === this.props.userId ?
-          <>
+
             <Button onClick={() => {this.props.history.push(`/item/${this.props.item.id}/edit`)}}>Edit</Button>
-          
+
             <Button onClick={() => {this.props.handleDelete(this.props.item.id)}}>Delete</Button>
-          </>
-          : null
-          }
 
           <Button>Buy</Button>
         </CardBody>
@@ -47,3 +43,6 @@ class ItemCard extends Component {
   }
 }
 export default ItemCard;
+
+// {this.props.item.userId === this.props.userId ?
+//   <>

@@ -72,19 +72,13 @@ class AddItem extends Component {
                 <FormGroup row>
                     <Label for="color" sm={2}>Color</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="color" name="color" id="color" placeholder="Color" />
+                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="colorPicker" placeholder="Color" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="size" sm={2}>Select One</Label>
+                    <Label for="size" sm={2}>Size</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="size" name="size" id="size" multiple>
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </Input>
+                    <Input onChange={this.handleFieldChange} type="size" name="size" id="size" placeholder="Size"/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
