@@ -64,9 +64,9 @@ class AddItem extends Component {
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="styleName" sm={2}>Style Name</Label>
+                    <Label for="itemName" sm={2}>Style Name</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="style" name="style" id="style" placeholder="Style"/>
+                    <Input onChange={this.handleFieldChange} type="itemName" name="itemName" id="itemName" placeholder="Item Name"/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
@@ -76,9 +76,9 @@ class AddItem extends Component {
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
+                    <Label for="size" sm={2}>Select One</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="select" name="selectMulti" id="exampleSelectMulti" multiple>
+                    <Input onChange={this.handleFieldChange} type="size" name="size" id="size" multiple>
                         <option>XS</option>
                         <option>S</option>
                         <option>M</option>
