@@ -64,6 +64,17 @@
       "description": "Good, gently used condition.",
       "imageURL": "",
       "userId": 1
+    },
+    {
+      "price": "10000",
+      "itemName": "TRYAGAIN",
+      "brand": "TRYAGAIN",
+      "size": "SMALL",
+      "color": "BLACK",
+      "description": "shoes",
+      "imageURL": "",
+      "userId": 1,
+      "id": 9
     }
   ]
 }

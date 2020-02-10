@@ -31,11 +31,13 @@ class ItemCard extends Component {
           <CardSubtitle>{this.props.item.color}</CardSubtitle>
           <CardText>{this.props.item.description}</CardText>
 
+          {this.props.item.userId === this.props.userId ?
+          <>
             <Button onClick={() => {this.props.history.push(`/item/${this.props.item.id}/edit`)}}>Edit</Button>
-
             <Button onClick={() => {this.props.handleDelete(this.props.item.id)}}>Delete</Button>
+            </>
+            : <Button>Buy</Button> }
 
-          <Button>Buy</Button>
         </CardBody>
       </Card>
       </div>

@@ -17,7 +17,7 @@ class AddItem extends Component {
         userId: "",
         loadingStatus: true,
     };
-    currentUserId = parseInt(sessionStorage.getItem("userId"))
+    currentUserId = parseInt(sessionStorage.getItem("credentials"))
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -25,11 +25,16 @@ class AddItem extends Component {
         this.setState(stateToChange);
     };
 
+    componentDidMount = () => {
+        this.setState ({
+            userId: this.currentUserId
+        })
+    }
     constructNewItem = evt => {
         evt.preventDefault();
         // if (this.state.itemName === "") {
         //     window.alert("Please input name of item");
-        // } else 
+        // } else
             this.setState({ loadingStatus: true });
         const newItem = {
                 price: this.state.price,
@@ -42,7 +47,7 @@ class AddItem extends Component {
                 userId: this.currentUserId
             };
         APIManager.post(newItem)
-            .then(() => this.props.history.push(`/item`));
+            .then(() => this.props.history.push(`/`));
     };
 
     render(){
@@ -72,7 +77,7 @@ class AddItem extends Component {
                 <FormGroup row>
                     <Label for="color" sm={2}>Color</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="colorPicker" placeholder="Color" />
+                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="color" placeholder="Color" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>

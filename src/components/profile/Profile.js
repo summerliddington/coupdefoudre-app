@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import APImanager from "../../modules/APIManager";
 import "./Profile.css";
-import MyItemsList from '../home/MyItemsList';
+import MyItemsList from './MyItemsList';
 
 
 
