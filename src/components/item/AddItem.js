@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import APIManager from '../../modules/APIManager';
 import './AddItem.css'
 
@@ -56,6 +56,13 @@ class AddItem extends Component {
             <>
             <div className="itemFormContainer">
             <Form>
+            <FormGroup row>
+                    <Label for="imageURL" sm={2}>imageURL</Label>
+                    <Col sm={10}>
+                    <Input onChange={this.handleFieldChange} type="imageURL" name="imageURL" id="imageURL" />
+                    </Col>
+                </FormGroup>
+
                 <FormGroup row>
                     <Label for="price" sm={2}>Price</Label>
                     <Col sm={10}>
@@ -92,17 +99,7 @@ class AddItem extends Component {
                     <Input onChange={this.handleFieldChange} type="description" name="description" id="description" />
                     </Col>
                 </FormGroup>
-                <FormGroup row>
-                    <Label for="exampleFile" sm={2}>File</Label>
-                    <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="file" name="file" id="exampleFile" />
-                    <FormText color="muted">
-                        This is some placeholder block-level help text for the above input.
-                        It's a bit lighter and easily wraps to a new line.
-                    </FormText>
-                    </Col>
-                </FormGroup>
-
+                
                     <Button onClick={this.constructNewItem}>Submit</Button>
                 </Form>
             </div>

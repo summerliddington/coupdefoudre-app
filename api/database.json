@@ -40,7 +40,7 @@
       "size": "small",
       "color": "oak",
       "description": "Good, gently used condition.",
-      "imageURL": "",
+      "imageURL": "ablebag.jpeg",
       "userId": 1
     },
     {
@@ -51,7 +51,7 @@
       "size": "small",
       "color": "oak",
       "description": "Good, gently used condition.",
-      "imageURL": "",
+      "imageURL": "dress.jpeg",
       "userId": 2
     },
     {
@@ -62,19 +62,8 @@
       "size": "small",
       "color": "oak",
       "description": "Good, gently used condition.",
-      "imageURL": "",
+      "imageURL": "nisolo.jpeg",
       "userId": 1
-    },
-    {
-      "price": "10000",
-      "itemName": "TRYAGAIN",
-      "brand": "TRYAGAIN",
-      "size": "SMALL",
-      "color": "BLACK",
-      "description": "shoes",
-      "imageURL": "",
-      "userId": 1,
-      "id": 9
     }
   ]
 }
