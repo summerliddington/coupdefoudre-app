@@ -34,36 +34,58 @@
   "items": [
     {
       "id": 2,
-      "price": "$5",
-      "itemName": "my item",
-      "brand": "babaa",
-      "size": "small",
-      "color": "oak",
-      "description": "Good, gently used condition.",
+      "price": "$50",
+      "itemName": "crossbody bag",
+      "brand": "ABLE",
+      "size": "OS",
+      "color": "Dune",
+      "description": "Very good condition, only wore for a couple weeks on a trip.",
       "imageURL": "ablebag.jpeg",
       "userId": 1
     },
     {
       "id": 7,
-      "price": "$200",
-      "itemName": "not my item",
+      "price": "$45",
+      "itemName": "Maxi Dress",
       "brand": "babaa",
       "size": "small",
-      "color": "oak",
-      "description": "Good, gently used condition.",
+      "color": "Sea green",
+      "description": "Light weight, slightly sheer. Good condition. No flaws",
       "imageURL": "dress.jpeg",
       "userId": 2
     },
     {
       "id": 4,
-      "price": "$5",
-      "itemName": "my tiem",
-      "brand": "babaa",
-      "size": "small",
-      "color": "oak",
-      "description": "Good, gently used condition.",
+      "price": "$65",
+      "itemName": "Chukka Boot",
+      "brand": "Nisolo",
+      "size": "8.5",
+      "color": "Oak",
+      "description": "Good, gently used condition. Water spots on front toe area - shown in photos",
       "imageURL": "nisolo.jpeg",
       "userId": 1
+    },
+    {
+      "id": 4,
+      "price": "$95",
+      "itemName": "Clyde Pant",
+      "brand": "Elizabeth Suzann",
+      "size": "4 Regular",
+      "color": "Khaki",
+      "description": "Great condition. Only worn a handle full of times. Cotton canvas.",
+      "imageURL": "Clydepant.jpeg",
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "price": "$70",
+      "itemName": "Townesie sweater",
+      "brand": "Gravel & Gold ",
+      "size": "4 but runs large",
+      "color": "Honey",
+      "description": "Brand new with tags, never worn. Cotten fleece.",
+      "imageURL": "yellowsweater.jpeg",
+      "userId": 4
     }
   ]
 }
