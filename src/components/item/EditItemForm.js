@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import APIManager from '../../modules/APIManager';
 
 
@@ -67,7 +67,14 @@ class EditItemForm extends Component {
       return (
         <>
         <div className="itemFormContainer">
-            <Form>
+        <Form>
+            <FormGroup row>
+                    <Label for="imageURL" sm={2}>imageURL</Label>
+                    <Col sm={10}>
+                    <Input onChange={this.handleFieldChange} type="imageURL" name="imageURL" id="imageURL" />
+                    </Col>
+                </FormGroup>
+
                 <FormGroup row>
                     <Label for="price" sm={2}>Price</Label>
                     <Col sm={10}>
@@ -89,19 +96,13 @@ class EditItemForm extends Component {
                 <FormGroup row>
                     <Label for="color" sm={2}>Color</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="color" name="color" id="color"value={this.state.color} />
+                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="color"value={this.state.color} />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
+                    <Label for="size" sm={2}>Size</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </Input>
+                    <Input onChange={this.handleFieldChange} type="size" name="size" id="size" value={this.state.size}/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>
@@ -110,17 +111,6 @@ class EditItemForm extends Component {
                     <Input onChange={this.handleFieldChange} type="description" name="description" id="description"value={this.state.description} />
                     </Col>
                 </FormGroup>
-                <FormGroup row>
-                    <Label for="exampleFile" sm={2}>File</Label>
-                    <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="file" name="file" id="exampleFile" />
-                    <FormText color="muted">
-                        This is some placeholder block-level help text for the above input.
-                        It's a bit lighter and easily wraps to a new line.
-                    </FormText>
-                    </Col>
-                </FormGroup>
-
                     <Button onClick={this.updateExistingItem}>Submit</Button>
                 </Form>
             </div>

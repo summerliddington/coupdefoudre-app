@@ -3,7 +3,6 @@ import React, { Component } from "react";
 // import Login from "./auth/Login";
 import Home from "./components/home/Home"
 import Profile from "./components/profile/Profile";
-import ItemList from "./components/item/ItemList";
 import AddItem from "./components/item/AddItem"
 import EditItemForm from "./components/item/EditItemForm"
 
@@ -19,9 +18,9 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <Home {...props} />
                   }} />
-                <Route exact path="/item" render={(props) => {
+                {/* <Route exact path="/item" render={(props) => {
                     return <ItemList {...props} />
-                  }} />
+                  }} /> */}
                 <Route exact path="/profile" render={(props) => {
                     return <Profile {...props} />
                   }} />

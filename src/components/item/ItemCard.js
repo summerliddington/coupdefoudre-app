@@ -22,7 +22,7 @@ class ItemCard extends Component {
     return (
       <div className="itemCardContainer">
         <Card top="true" width="180px" body outline color="secondary">
-        <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+        <CardImg src={require(`../images/${this.props.item.imageURL}`)} />
         <CardBody>
           <CardTitle>{this.props.item.price}</CardTitle>
           <CardSubtitle>{this.props.item.brand}</CardSubtitle>
@@ -31,11 +31,13 @@ class ItemCard extends Component {
           <CardSubtitle>{this.props.item.color}</CardSubtitle>
           <CardText>{this.props.item.description}</CardText>
 
+          {this.props.item.userId === this.props.userId ?
+          <>
             <Button onClick={() => {this.props.history.push(`/item/${this.props.item.id}/edit`)}}>Edit</Button>
-
             <Button onClick={() => {this.props.handleDelete(this.props.item.id)}}>Delete</Button>
+            </>
+            : <Button>Buy</Button> }
 
-          <Button>Buy</Button>
         </CardBody>
       </Card>
       </div>

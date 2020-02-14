@@ -10,7 +10,7 @@ import React, { Component } from 'react'
             userId: ""
         }
 
-        currentUserId = (sessionStorage.getItem("credentials"))
+        currentUserId = parseInt(sessionStorage.getItem("credentials"))
 
 
         handleDelete = (id) => {
@@ -32,7 +32,8 @@ import React, { Component } from 'react'
         APIManager.getWithUserId(this.currentUserId)
         .then((items) => {
             this.setState({
-                items: items
+                items: items,
+                userId: this.currentUserId
             })
         })
     }

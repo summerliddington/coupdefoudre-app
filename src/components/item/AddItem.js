@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import APIManager from '../../modules/APIManager';
 import './AddItem.css'
 
@@ -17,7 +17,7 @@ class AddItem extends Component {
         userId: "",
         loadingStatus: true,
     };
-    currentUserId = parseInt(sessionStorage.getItem("userId"))
+    currentUserId = parseInt(sessionStorage.getItem("credentials"))
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -25,11 +25,16 @@ class AddItem extends Component {
         this.setState(stateToChange);
     };
 
+    componentDidMount = () => {
+        this.setState ({
+            userId: this.currentUserId
+        })
+    }
     constructNewItem = evt => {
         evt.preventDefault();
         // if (this.state.itemName === "") {
         //     window.alert("Please input name of item");
-        // } else 
+        // } else
             this.setState({ loadingStatus: true });
         const newItem = {
                 price: this.state.price,
@@ -42,7 +47,7 @@ class AddItem extends Component {
                 userId: this.currentUserId
             };
         APIManager.post(newItem)
-            .then(() => this.props.history.push(`/item`));
+            .then(() => this.props.history.push(`/`));
     };
 
     render(){
@@ -51,6 +56,13 @@ class AddItem extends Component {
             <>
             <div className="itemFormContainer">
             <Form>
+            <FormGroup row>
+                    <Label for="imageURL" sm={2}>imageURL</Label>
+                    <Col sm={10}>
+                    <Input onChange={this.handleFieldChange} type="imageURL" name="imageURL" id="imageURL" />
+                    </Col>
+                </FormGroup>
+
                 <FormGroup row>
                     <Label for="price" sm={2}>Price</Label>
                     <Col sm={10}>
@@ -72,7 +84,7 @@ class AddItem extends Component {
                 <FormGroup row>
                     <Label for="color" sm={2}>Color</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="colorPicker" placeholder="Color" />
+                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="color" placeholder="Color" />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
@@ -87,17 +99,6 @@ class AddItem extends Component {
                     <Input onChange={this.handleFieldChange} type="description" name="description" id="description" />
                     </Col>
                 </FormGroup>
-                <FormGroup row>
-                    <Label for="exampleFile" sm={2}>File</Label>
-                    <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="file" name="file" id="exampleFile" />
-                    <FormText color="muted">
-                        This is some placeholder block-level help text for the above input.
-                        It's a bit lighter and easily wraps to a new line.
-                    </FormText>
-                    </Col>
-                </FormGroup>
-
                     <Button onClick={this.constructNewItem}>Submit</Button>
                 </Form>
             </div>
