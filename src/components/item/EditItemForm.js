@@ -96,19 +96,13 @@ class EditItemForm extends Component {
                 <FormGroup row>
                     <Label for="color" sm={2}>Color</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="color" name="color" id="color"value={this.state.color} />
+                    <Input onChange={this.handleFieldChange} type="colorPicker" name="colorPicker" id="color"value={this.state.color} />
                     </Col>
                 </FormGroup>
                 <FormGroup row>
-                    <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
+                    <Label for="size" sm={2}>Size</Label>
                     <Col sm={10}>
-                    <Input onChange={this.handleFieldChange} type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </Input>
+                    <Input onChange={this.handleFieldChange} type="size" name="size" id="size" value={this.state.size}/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>

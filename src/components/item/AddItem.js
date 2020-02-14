@@ -99,7 +99,6 @@ class AddItem extends Component {
                     <Input onChange={this.handleFieldChange} type="description" name="description" id="description" />
                     </Col>
                 </FormGroup>
-                
                     <Button onClick={this.constructNewItem}>Submit</Button>
                 </Form>
             </div>
