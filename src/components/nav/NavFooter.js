@@ -12,7 +12,7 @@ class NavFooter extends Component {
 render(){
 
     return (
-      <div>
+      <div className="footerLinks">
           <Nav>
             <NavItem>
               <NavLink className="nav-link" href="/"><img id="homeIcon" src={require('./home-icon.png')} alt="Home Button"/></NavLink>

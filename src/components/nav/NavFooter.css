@@ -5,6 +5,7 @@
 } */
 
 .footerLinks {
+    display: flex;
     list-style-type: none;
     flex-direction: row;
     justify-content: space-evenly;
@@ -12,3 +13,4 @@
 .nav-link {
  padding: 2em;
 }
+
